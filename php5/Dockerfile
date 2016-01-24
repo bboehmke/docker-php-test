@@ -2,7 +2,7 @@ FROM bboehmke/php:5-fpm
 
 # install doxygen
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get -y doxygen graphviz && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y install doxygen graphviz && \
     rm -rf /var/lib/apt/lists/*
 
 # install composer
